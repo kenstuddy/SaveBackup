@@ -1,0 +1,37 @@
+<idea-plugin>
+  <id>com.ken.savebackup</id>
+  <name>Save Backup</name>
+  <version>1.0</version>
+  <vendor email="kenstuddy@gmail.com" url="https://kenstuddy.com">Ken Studdy</vendor>
+
+  <description><![CDATA[
+      This JetBrains IDE plugin saves a backup copy of your current open file every time you save the file.
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Version 1.0: First public release.
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products-->
+  <depends>com.intellij.modules.lang</depends>
+
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+  <application-components>
+    <component>
+      <implementation-class>ken.OnFileSaveComponent</implementation-class>
+    </component>
+  </application-components>
+</idea-plugin>
