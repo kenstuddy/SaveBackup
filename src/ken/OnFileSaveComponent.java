@@ -9,6 +9,7 @@ import com.intellij.openapi.fileEditor.FileDocumentManagerAdapter;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.util.messages.MessageBus;
 import com.intellij.util.messages.MessageBusConnection;
+import com.sun.jna.Platform;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
@@ -21,8 +22,8 @@ import java.util.Calendar;
  * This class handles the OnFileSave component. It implements the ApplicationComponent interface and
  * overrides the beforeDocumentSaving method of the abstract class FileDocumentManagerAdapter.
  * @author Ken Studdy
- * @date July 15, 2018
- * @version 1.0
+ * @date July 16, 2018
+ * @version 1.1
  */
 public class OnFileSaveComponent implements ApplicationComponent {
     private String fileName;
@@ -71,16 +72,26 @@ public class OnFileSaveComponent implements ApplicationComponent {
                         //Here we remove the extension from the file name.
                         src = fileName.replace("." + fileExtension, "");
 
+                        //On Windows, we cannot have : in the folder name, and we might as well remove it for other operating systems too for cross-platform compatibility.
+                        src = src.replace(":", "");
+
                         //The destination folder should be in the user's home directory, this works on most operating systems and prevents permission issues.
-                        dest = System.getProperty("user.home") + "/.SaveBackup";
+                        dest = System.getProperty("user.home") + File.separator +  ".SaveBackup";
+
+                        //If we are on Windows, we need to append another file separator to the end of our destination folder.
+                        if (Platform.isWindows()) {
+                            dest += File.separator;
+                        }
 
                         //The output file is based on the destination folder with the source folder and file name appended to the destination folder in addition to a time stamp of when the file was saved.
                         output = dest + src + "-" + logTime + "." + fileExtension;
                         try {
                             File newFile = new File(output);
 
-                            //Create all the folders for the output directory, this also works with Linux by incrementally creating the folders one at a time.
-                            newFile.getParentFile().mkdirs();
+                            //Create all the folders for the output directory if they don't exist, this also works with Linux by incrementally creating the folders one at a time.
+                            if (!newFile.getParentFile().exists()) {
+                                newFile.getParentFile().mkdirs();
+                            }
 
                             BufferedWriter writer = new BufferedWriter(new FileWriter(newFile));
 
