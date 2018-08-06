@@ -21,7 +21,7 @@ import java.util.Calendar;
  * This class handles the OnFileSave component. It implements the ApplicationComponent interface and
  * overrides the beforeDocumentSaving method of the abstract class FileDocumentManagerAdapter.
  * @author Ken Studdy
- * @date July 16, 2018
+ * @date August 5, 2018
  * @version 1.2
  */
 public class OnFileSaveComponent implements ApplicationComponent {
