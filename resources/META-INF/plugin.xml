@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.ken.savebackup</id>
   <name>Save Backup</name>
-  <version>1.1</version>
+  <version>1.2</version>
   <vendor email="kenstuddy@gmail.com" url="https://kenstuddy.com">Ken Studdy</vendor>
 
   <description><![CDATA[
@@ -9,6 +9,7 @@
     ]]></description>
 
   <change-notes><![CDATA[
+      Version 1.2: Removed JNA dependency for Windows checking. <br />
       Version 1.1: Fixed Windows compatibility. <br />
       Version 1.0: First public release.
     ]]>
