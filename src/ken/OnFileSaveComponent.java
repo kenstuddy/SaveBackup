@@ -23,7 +23,7 @@ import java.util.Calendar;
  * overrides the beforeDocumentSaving method of the abstract class FileDocumentManagerAdapter.
  * @author Ken Studdy
  * @date July 16, 2018
- * @version 1.1
+ * @version 1.2
  */
 public class OnFileSaveComponent implements ApplicationComponent {
     private String fileName;
@@ -79,7 +79,7 @@ public class OnFileSaveComponent implements ApplicationComponent {
                         dest = System.getProperty("user.home") + File.separator +  ".SaveBackup";
 
                         //If we are on Windows, we need to append another file separator to the end of our destination folder.
-                        if (Platform.isWindows()) {
+                        if (System.getProperty("os.name").startsWith("Windows")) {
                             dest += File.separator;
                         }
 
