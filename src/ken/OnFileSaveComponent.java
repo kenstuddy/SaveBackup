@@ -5,7 +5,7 @@ import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ApplicationComponent;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.fileEditor.FileDocumentManager;
-import com.intellij.openapi.fileEditor.FileDocumentManagerAdapter;
+import com.intellij.openapi.fileEditor.FileDocumentManagerListener;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.util.messages.MessageBus;
 import com.intellij.util.messages.MessageBusConnection;
@@ -21,8 +21,8 @@ import java.util.Calendar;
  * This class handles the OnFileSave component. It implements the ApplicationComponent interface and
  * overrides the beforeDocumentSaving method of the abstract class FileDocumentManagerAdapter.
  * @author Ken Studdy
- * @date August 5, 2018
- * @version 1.2
+ * @date August 7, 2018
+ * @version 1.3
  */
 public class OnFileSaveComponent implements ApplicationComponent {
     private String fileName;
@@ -49,7 +49,7 @@ public class OnFileSaveComponent implements ApplicationComponent {
         MessageBusConnection connection = bus.connect();
 
         connection.subscribe(AppTopics.FILE_DOCUMENT_SYNC,
-                new FileDocumentManagerAdapter() {
+                new FileDocumentManagerListener() {
 
                     /**
                      * Handle the saving of the document. This overrides the beforeDocumentSaving method in the FileDocumentManagerAdapter abstract class.
