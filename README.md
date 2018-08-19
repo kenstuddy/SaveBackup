@@ -3,6 +3,7 @@ This JetBrains IDE plugin saves a backup copy of your current open file every ti
 
 # Requirements
 A JetBrains IDE version 2017.3 or newer for version 1.2 of this plugin and earlier
+
 A JetBrains IDE version 2018.2 or newer for version 1.3 of this plugin and newer
 
 # How to Install
