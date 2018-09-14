@@ -19,7 +19,7 @@ import java.util.Calendar;
 
 /**
  * This class handles the OnFileSave component. It implements the ApplicationComponent interface and
- * overrides the beforeDocumentSaving method of the abstract class FileDocumentManagerAdapter.
+ * overrides the beforeDocumentSaving method of the interface FileDocumentManagerListener.
  * @author Ken Studdy
  * @date August 7, 2018
  * @version 1.3
@@ -52,7 +52,7 @@ public class OnFileSaveComponent implements ApplicationComponent {
                 new FileDocumentManagerListener() {
 
                     /**
-                     * Handle the saving of the document. This overrides the beforeDocumentSaving method in the FileDocumentManagerAdapter abstract class.
+                     * Handle the saving of the document. This overrides the beforeDocumentSaving method in the FileDocumentManagerAdapter interface.
                      * @param document The current document
                      */
                     @Override
@@ -102,7 +102,33 @@ public class OnFileSaveComponent implements ApplicationComponent {
                             e.printStackTrace();
                         }
                     }
-        });
+
+                    //This is the implementation of the methods of interface FileDocumentManagerListener that are not being used for this plugin.
+                    @Override
+                    public void beforeAllDocumentsSaving() {
+
+                    }
+                    @Override
+                    public void beforeFileContentReload(VirtualFile file, @NotNull Document document) {
+
+                    }
+                    @Override
+                    public void fileContentLoaded(@NotNull VirtualFile file, @NotNull Document document) {
+
+                    }
+                    @Override
+                    public void fileContentReloaded(@NotNull VirtualFile file, @NotNull Document document) {
+
+                    }
+                    @Override
+                    public void fileWithNoDocumentChanged(@NotNull VirtualFile file) {
+
+                    }
+                    @Override
+                    public void unsavedDocumentsDropped() {
+
+                    }
+                });
     }
 
     /**
