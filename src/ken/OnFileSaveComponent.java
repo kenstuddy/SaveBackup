@@ -103,7 +103,7 @@ public class OnFileSaveComponent implements ApplicationComponent {
                         }
                     }
 
-                    //This is the implementation of the methods of interface FileDocumentManagerListener that are not being used for this plugin. The latest version of the of the JetBrains API (known as Open API) actually declares these methods as default (this is a new keyword in Java 8 which allows you to have a default implementation provided in the interface so these methods do not need to be implemented when you implement the interface) but it's still good practice to implement all methods when implementing an interface.
+                    //This is the implementation of the methods of interface FileDocumentManagerListener that are not being used for this plugin. The latest version of the of the JetBrains API (known as Open API) actually declares these methods as default (this is a new keyword in Java 8 which allows you to have a default implementation provided in the interface so these methods do not need to be implemented when you implement the interface) but it is still a good practice to implement all methods when implementing an interface.
                     @Override
                     public void beforeAllDocumentsSaving() {
 
