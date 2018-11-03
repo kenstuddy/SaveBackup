@@ -96,6 +96,7 @@ public class OnFileSaveComponent implements ApplicationComponent {
 
                             //Write to the file based on the entire text of the document instead of looping through the lines.
                             writer.write(document.getText());
+                            //We are done writing, so close the writer.
                             writer.close();
                         }
                         catch(Exception e) {
