@@ -19,11 +19,11 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**
- * This class handles the OnFileSave component. It implements the ApplicationComponent interface and
+ * This class handles the OnFileSave component. It implements the BaseComponent interface and
  * overrides (implements) the beforeDocumentSaving method of the interface FileDocumentManagerListener.
  * @author Ken Studdy
  * @date September 23, 2019
- * @version 1.5
+ * @version 1.6
  */
 public class OnFileSaveComponent implements BaseComponent {
     private String fileName;
