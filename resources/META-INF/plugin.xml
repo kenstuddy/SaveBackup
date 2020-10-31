@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.ken.savebackup</id>
   <name>Save Backup</name>
-  <version>1.7</version>
+  <version>1.8</version>
   <vendor email="kenstuddy@gmail.com" url="https://kenstuddy.com">Ken Studdy</vendor>
 
   <description><![CDATA[
@@ -9,7 +9,8 @@
     ]]></description>
 
   <change-notes><![CDATA[
-      Version 1.7: Improved API usage by no longer requiring deprecated interface BaseComponent.
+      Version 1.8: Fixed formatting of changelog. <br />  
+      Version 1.7: Improved API usage by no longer requiring deprecated interface BaseComponent. <br />
       Version 1.6: Improved clarity of comments in source code. <br />
       Version 1.5: Implemented saving of all open unsaved documents and replaced deprecated ApplicationComponent with BaseComponent. <br />
       Version 1.4: Implemented the remaining methods of interface FileDocumentManagerListener. <br />
