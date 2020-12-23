@@ -49,7 +49,7 @@ public class OnFileSaveComponent {
                 //Here we create a BufferedWriter to create our properties file and store the Properties object.
                 try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(System.getProperty("user.home"), File.separator, "SaveBackup.ini"),
                         StandardOpenOption.CREATE)) {
-                    //Here, we set the default values for the properties. These properties are user-changeable.
+                    //Here, we set the default values for the properties. These properties are user-customizable.
                     properties.put("destinationPath", Paths.get(System.getProperty("user.home"), File.separator, ".SaveBackup").toString());
                     properties.put("fileDateFormat", "yyyy-MM-dd_HH-mm-ss");
                     properties.put("logDateFormat", "dd MMM yyyy, h:mm:ss a");

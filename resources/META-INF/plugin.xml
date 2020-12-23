@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.ken.savebackup</id>
   <name>Save Backup</name>
-  <version>1.8</version>
+  <version>2.0</version>
   <vendor email="kenstuddy@gmail.com" url="https://kenstuddy.com">Ken Studdy</vendor>
 
   <description><![CDATA[
@@ -9,6 +9,7 @@
     ]]></description>
 
   <change-notes><![CDATA[
+      Version 2.0: Added user-customizable properties. Added logging. Rewrote main loop logic. <br />
       Version 1.8: Fixed formatting of changelog. <br />  
       Version 1.7: Improved API usage by no longer requiring deprecated interface BaseComponent. <br />
       Version 1.6: Improved clarity of comments in source code. <br />
