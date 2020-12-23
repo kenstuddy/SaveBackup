@@ -19,5 +19,5 @@ On the plugins window, click "INSTALL JETBRAINS PLUGIN" then type in "Save Backu
 
 Click the green "Install" button and restart your JetBrains IDE
 
-Once you have restarted your JetBrains IDE, you can now save a file. You should notice a folder in your home directory called ```.SaveBackup``` with subfolders that contain a timestamped copy of any file you save in your JetBrains IDE.
+Once you have restarted your JetBrains IDE, you can now save a file. You should notice a folder in your home directory called ```.SaveBackup``` with subfolders that contain a timestamped copy of any file you save in your JetBrains IDE. There is also a SaveBackup.ini file created in your home folder after you first save your first file with this plugin, you can use the file to customize different settings for this plugin.
 
