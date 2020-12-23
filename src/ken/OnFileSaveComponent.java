@@ -26,7 +26,7 @@ import java.util.Properties;
  * @author Ken Studdy
  * @created July 15, 2018
  * @updated December 22, 2020
- * @version 2.0
+ * @version 2.1
  */
 public class OnFileSaveComponent {
 
@@ -181,7 +181,7 @@ public class OnFileSaveComponent {
         t.printStackTrace();
         //We only want to log to the error file if error logging is enabled.
         if (Boolean.parseBoolean((String)properties.getOrDefault("errorLogging", "false"))) {
-            try (BufferedWriter writer = Files.newBufferedWriter(Path.of((String)properties.getOrDefault("errorLogFile", Paths.get(System.getProperty("user.home"), File.separator, "SaveBackupError.txt").toString())), StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
+            try (BufferedWriter writer = Files.newBufferedWriter(Paths.get((String)properties.getOrDefault("errorLogFile", Paths.get(System.getProperty("user.home"), File.separator, "SaveBackupError.txt").toString())), StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
                 writer.write(getTime() + error + System.lineSeparator());
                 PrintWriter printWriter = new PrintWriter(writer);
                 t.printStackTrace(printWriter);
@@ -196,7 +196,7 @@ public class OnFileSaveComponent {
         System.out.println(getTime() + info);
         //We only want to log to the error file if info logging is enabled.
         if (Boolean.parseBoolean((String)properties.getOrDefault("infoLogging", "false"))) {
-            try (BufferedWriter writer = Files.newBufferedWriter(Path.of((String)properties.getOrDefault("infoLogFile", Paths.get(System.getProperty("user.home"), File.separator, "SaveBackupInfo.txt").toString())), StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
+            try (BufferedWriter writer = Files.newBufferedWriter(Paths.get((String)properties.getOrDefault("infoLogFile", Paths.get(System.getProperty("user.home"), File.separator, "SaveBackupInfo.txt").toString())), StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
                 writer.write(getTime() + info + System.lineSeparator());
             } catch (Exception e) {
                 System.err.println("An error has occurred writing the info log.");
