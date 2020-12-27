@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.ken.savebackup</id>
   <name>Save Backup</name>
-  <version>2.1</version>
+  <version>2.2</version>
   <vendor email="kenstuddy@gmail.com" url="https://kenstuddy.com">Ken Studdy</vendor>
 
   <description><![CDATA[
@@ -9,6 +9,7 @@
     ]]></description>
 
   <change-notes><![CDATA[
+      Version 2.2: Enabled error log file output by default. <br />
       Version 2.1: Fixed Java 8 backwards compatibility. <br />
       Version 2.0: Added user-customizable properties. Added logging. Rewrote main loop logic. <br />
       Version 1.8: Fixed formatting of changelog. <br />  
