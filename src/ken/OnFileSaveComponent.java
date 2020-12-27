@@ -54,7 +54,7 @@ public class OnFileSaveComponent {
                     properties.put("fileDateFormat", "yyyy-MM-dd_HH-mm-ss");
                     properties.put("logDateFormat", "dd MMM yyyy, h:mm:ss a");
                     properties.put("infoLogging", "false");
-                    properties.put("errorLogging", "false");
+                    properties.put("errorLogging", "true");
                     properties.put("infoLogFile", Paths.get(System.getProperty("user.home"), File.separator, "SaveBackupInfo.txt").toString());
                     properties.put("errorLogFile",  Paths.get(System.getProperty("user.home"), File.separator, "SaveBackupError.txt").toString());
                     properties.store(writer, "");
