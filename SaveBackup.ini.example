@@ -1,0 +1,9 @@
+#
+#Mon Jul 13 15:13:03 EDT 2022
+infoLogging=false
+infoLogFile=/home/ken/SaveBackupInfo.txt
+errorLogging=true
+errorLogFile=/home/ken/SaveBackupError.txt
+fileDateFormat=yyyy-MM-dd_HH-mm-ss
+destinationPath=/home/ken/.SaveBackup
+logDateFormat=dd MMM yyyy, h:mm:ss a
