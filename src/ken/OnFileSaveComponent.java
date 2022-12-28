@@ -25,8 +25,8 @@ import java.util.Properties;
  * This class handles the OnFileSave action. It overrides (implements) the beforeDocumentSaving method of the interface FileDocumentManagerListener.
  * @author Ken Studdy
  * @created July 15, 2018
- * @updated December 22, 2020
- * @version 2.1
+ * @updated December 28, 2022
+ * @version 2.3
  */
 public class OnFileSaveComponent {
 
