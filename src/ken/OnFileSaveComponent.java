@@ -1,6 +1,5 @@
 package ken;
 
-import com.intellij.AppTopics;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.fileEditor.FileDocumentManager;
@@ -25,8 +24,8 @@ import java.util.Properties;
  * This class handles the OnFileSave action. It overrides (implements) the beforeDocumentSaving method of the interface FileDocumentManagerListener.
  * @author Ken Studdy
  * @created July 15, 2018
- * @updated December 28, 2022
- * @version 2.3
+ * @updated December 11, 2023
+ * @version 3.0
  */
 public class OnFileSaveComponent {
 
@@ -68,7 +67,7 @@ public class OnFileSaveComponent {
             } catch (Exception e) {
                 logError("Unable to load " + Paths.get(System.getProperty("user.home"), File.separator, "SaveBackup.ini").toString(), e);
             }
-            connection.subscribe(AppTopics.FILE_DOCUMENT_SYNC,
+            connection.subscribe(FileDocumentManagerListener.TOPIC,
                     new FileDocumentManagerListener() {
 
                         String fileName;
