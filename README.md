@@ -6,6 +6,8 @@ A JetBrains IDE version 2017.3 or newer for version 1.2 and earlier of this plug
 
 A JetBrains IDE version 2018.2 or newer for version 1.3 and newer of this plugin
 
+A JetBrains IDE version 2023.3 or newer for version 3.0 and newer of this plugin
+
 # How to Install
 Note: These instructions assume you have an Internet connection. If you would like to install this plugin offline, make sure you have downloaded the jar file from the version you wish to use located at  https://github.com/kenstuddy/SaveBackup/releases and then in the plugins window of your JetBrains IDE select "INSTALL PLUGIN FROM DISK" instead of "INSTALL JETBRAINS PLUGIN", then select the location of the jar file.
 
