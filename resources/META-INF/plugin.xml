@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.ken.savebackup</id>
   <name>Save Backup</name>
-  <version>2.3</version>
+  <version>3.0</version>
   <vendor email="kenstuddy@gmail.com" url="https://kenstuddy.com">Ken Studdy</vendor>
 
   <description><![CDATA[
@@ -9,6 +9,7 @@
     ]]></description>
 
   <change-notes><![CDATA[
+      Version 3.0: Removed deprecated class AppTopics. <br />
       Version 2.3: Added SaveBackup.ini.example file. <br />
       Version 2.2: Enabled error log file output by default. <br />
       Version 2.1: Fixed Java 8 backwards compatibility. <br />
@@ -26,7 +27,7 @@
   </change-notes>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="182.0"/>
+  <idea-version since-build="233.6745.305"/>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
